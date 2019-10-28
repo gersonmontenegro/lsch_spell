@@ -1,32 +1,31 @@
 const fs = require('fs');
-const path = 'img/vocabulary';
+const vPath = 'img/vocabulary';
+const iPath = 'img/icons';
 const fileName = 'index.js';
 const fileHeader = 'const Assets = {';
+const fileFooter = '};\rexport default Assets;\r';
 
-const createFile = content => {
-  fs.writeFile(fileName, content, err => {
+const getFiles = path => {
+  return fs
+    .readdirSync(path)
+    .filter(file => file.endsWith('.png'))
+    .map(file => {
+      const propName = file
+        .split('/')
+        .toString()
+        .split('.')[0];
+      return `  ${propName}: require('assets/${path}/${file}')`;
+    });
+};
+
+const imgFiles = [...getFiles(vPath), ...getFiles(iPath)];
+const createFile = (content, header, footer) => {
+  let fileContent = header;
+  content.map(file => (fileContent = `${fileContent}\n${file},`));
+  fileContent = `${fileContent}\n${footer}`;
+  fs.writeFile(fileName, fileContent, err => {
     if (err) throw err;
   });
 };
 
-const closingFile = () => {
-  fs.appendFile(fileName, `\n};\nexport default Assets;\n`, () => {});
-};
-
-const addingLetters = letters => {
-  let l = '';
-  letters.map(async file => {
-    const fragments = file.toString().split('.');
-    l += `\n  ${fragments[0]}: 'assets/img/vocabulary/${file}',`;
-  });
-  return l;
-};
-
-createFile(fileHeader);
-
-fs.readdir(path, (_err, items) => {
-  const letters = addingLetters(items);
-  fs.appendFile(fileName, letters, () => {
-    closingFile();
-  });
-});
+createFile(imgFiles, fileHeader, fileFooter);
