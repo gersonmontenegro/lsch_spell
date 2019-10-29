@@ -29,4 +29,5 @@ const Assets = {
   heart_empty: require('assets/img/icons/heart_empty.png'),
   heart_full: require('assets/img/icons/heart_full.png'),
   ArcadeClassic: 'ArcadeClassic',
+  JOYSTIX: 'JOYSTIX',
 };export default Assets;
