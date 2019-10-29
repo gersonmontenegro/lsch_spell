@@ -28,4 +28,5 @@ const Assets = {
   ñ: require('assets/img/vocabulary/ñ.png'),
   heart_empty: require('assets/img/icons/heart_empty.png'),
   heart_full: require('assets/img/icons/heart_full.png'),
+  ArcadeClassic: 'ArcadeClassic',
 };export default Assets;
