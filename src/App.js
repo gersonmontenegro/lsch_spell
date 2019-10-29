@@ -10,16 +10,13 @@ import {
   Image,
 } from 'react-native';
 import Assets from './assets';
+import Main from './features/main/containers';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View>
-          <Text>Image!</Text>
-          <Image style={{width: 100, height: 200}} source={Assets.a} />
-        </View>
+      <SafeAreaView style={{flex: 1}}>
+        <Main />
       </SafeAreaView>
     </>
   );
