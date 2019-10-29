@@ -19,6 +19,8 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* lsch_spellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* lsch_spellTests.m */; };
 		B90573A6A39BD616C0BF221A /* libPods-lsch_spell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3ACA52F6B50EC67765FDBB /* libPods-lsch_spell.a */; };
+		C31E41E72367EAD3009165B5 /* ArcadeClassic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31E41E62367EAD3009165B5 /* ArcadeClassic.ttf */; };
+		C31E41E92367EC36009165B5 /* JOYSTIX.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C31E41E82367EC36009165B5 /* JOYSTIX.TTF */; };
 		F4FF73DDF960459A7E506EC9 /* libPods-lsch_spell-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03599D6FD5975AE397517CF6 /* libPods-lsch_spell-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		5FEEF638F369AB7CA544CAA6 /* Pods-lsch_spell-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lsch_spell-tvOS.release.xcconfig"; path = "Target Support Files/Pods-lsch_spell-tvOS/Pods-lsch_spell-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		6BFD6E2B438BD9CC43D47170 /* Pods-lsch_spell-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lsch_spell-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-lsch_spell-tvOSTests/Pods-lsch_spell-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		810D95F75BAC16A12334BB91 /* libPods-lsch_spellTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lsch_spellTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31E41E62367EAD3009165B5 /* ArcadeClassic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArcadeClassic.ttf; sourceTree = "<group>"; };
+		C31E41E82367EC36009165B5 /* JOYSTIX.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = JOYSTIX.TTF; sourceTree = "<group>"; };
 		CD00189F1D40A13BDBA4F7B5 /* Pods-lsch_spellTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lsch_spellTests.release.xcconfig"; path = "Target Support Files/Pods-lsch_spellTests/Pods-lsch_spellTests.release.xcconfig"; sourceTree = "<group>"; };
 		D39641E956024E6A5003CC11 /* Pods-lsch_spell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lsch_spell.debug.xcconfig"; path = "Target Support Files/Pods-lsch_spell/Pods-lsch_spell.debug.xcconfig"; sourceTree = "<group>"; };
 		DC3ACA52F6B50EC67765FDBB /* libPods-lsch_spell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lsch_spell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +152,6 @@
 				08BF6B37600365F57C8852A5 /* Pods-lsch_spellTests.debug.xcconfig */,
 				CD00189F1D40A13BDBA4F7B5 /* Pods-lsch_spellTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +178,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C31E41E52367EAD3009165B5 /* fonts */,
 				13B07FAE1A68108700A75B9A /* lsch_spell */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* lsch_spellTests */,
@@ -196,6 +200,16 @@
 				2D02E4901E0B4A5D006451C7 /* lsch_spell-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C31E41E52367EAD3009165B5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C31E41E82367EC36009165B5 /* JOYSTIX.TTF */,
+				C31E41E62367EAD3009165B5 /* ArcadeClassic.ttf */,
+			);
+			name = fonts;
+			path = ../src/assets/fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +322,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +351,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31E41E72367EAD3009165B5 /* ArcadeClassic.ttf in Resources */,
+				C31E41E92367EC36009165B5 /* JOYSTIX.TTF in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
