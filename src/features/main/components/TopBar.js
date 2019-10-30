@@ -4,7 +4,7 @@ import Assets from 'assets';
 
 const TopBar = () => {
     return (
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', height: 30}}>
             <View style={{flexDirection: 'row', flex: 1}}>
                 <Image style={{width: 30, height: 30}} source={Assets.heart_full} />
                 <Image style={{width: 30, height: 30}} source={Assets.heart_full} />
