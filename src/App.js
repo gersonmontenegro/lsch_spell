@@ -11,11 +11,12 @@ import {
 } from 'react-native';
 import Assets from './assets';
 import Main from './features/main/containers';
+import Styles from './styles';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={Styles.MainContainer}>
         <Main />
       </SafeAreaView>
     </>

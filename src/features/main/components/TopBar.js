@@ -1,17 +1,18 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
 import Assets from 'assets';
+import Styles from '../../../styles';
 
 const TopBar = () => {
     return (
-        <View style={{flexDirection: 'row', height: 30}}>
-            <View style={{flexDirection: 'row', flex: 1}}>
-                <Image style={{width: 30, height: 30}} source={Assets.heart_full} />
-                <Image style={{width: 30, height: 30}} source={Assets.heart_full} />
-                <Image style={{width: 30, height: 30}} source={Assets.heart_full} />
+        <View style={Styles.TobBarContainer}>
+            <View style={Styles.TopStatusBar}>
+                <Image style={Styles.HeartIconStyle} source={Assets.heart_full} />
+                <Image style={Styles.HeartIconStyle} source={Assets.heart_full} />
+                <Image style={Styles.HeartIconStyle} source={Assets.heart_full} />
             </View>
-            <View style={{flexDirection: 'row', flex: 1, alignItems: 'center', justifyContent: 'flex-end'}}>
-                <Text style={{fontFamily: Assets.ArcadeClassic, fontSize: 30}}>99999</Text>
+            <View style={Styles.TextScoreContainerStyle}>
+                <Text style={Styles.TextScoreStyle}>99999</Text>
             </View>
         </View>
     );

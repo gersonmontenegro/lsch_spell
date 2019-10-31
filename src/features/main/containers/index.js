@@ -3,10 +3,11 @@ import {View, Text} from 'react-native';
 import TopBar from '../components/TopBar';
 import Hands from '../components/Hands';
 import Footer from '../components/Footer';
+import Styles from '../../../styles';
 
 const Main = () => {
     return (
-        <View style={{flex: 1}}>
+        <View style={Styles.MainWrapper}>
             <TopBar />
             <Hands />
             <Footer />
