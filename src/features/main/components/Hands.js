@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Image } from 'react-native';
-import Assets from 'assets';
+import React, { useState } from 'react';
+import { View, Image, Text } from 'react-native';
 import Styles from '../../../styles';
+import HandsSpell from './HandsSpell';
 
 const Hands = () => {
     return (
         <View style={Styles.HandsContainerStyle}>
-            <Image style={Styles.HandImageStyle} source={Assets.a} />
+            <HandsSpell word='Mathew' />
         </View>
     );
 };
