@@ -1,12 +1,11 @@
-import React, { useEffect, useCallback, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Image, Text } from 'react-native';
+import { Image } from 'react-native';
 import useInterval from 'use-interval';
 import Assets from 'assets';
-import Styles from '../../../styles';
-import useFetch from '../../../providers/hooks';
-import { selectCurrentWord } from 'reducers/selectors';
+import selectCurrentWord from 'reducers/selectors';
 import { setWord } from 'actions';
+import Styles from '../../../styles';
 
 const urlDemoData = 'https://raw.githubusercontent.com/gersonmontenegro/lsch_spell/master/src/providers/demoText.txt';
 

@@ -1,10 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { View, Text } from 'react-native';
-import Assets from 'assets';
+import selectCurrentWord from 'reducers/selectors';
 import Styles from '../../../styles';
-import { getWord } from 'actions';
-import { selectCurrentWord } from 'reducers/selectors';
 
 const Footer = () => {
     const currentWord = useSelector(selectCurrentWord);

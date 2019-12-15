@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const currentWord = state => state.wordReducer.currentWord;
+const currentWord = (state) => state.wordReducer.currentWord;
 
-export const selectCurrentWord = createSelector(
+export default createSelector(
     currentWord,
-    currentWord => currentWord
+    (currentWord) => currentWord,
 );
