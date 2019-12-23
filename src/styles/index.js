@@ -30,7 +30,6 @@ const Styles = {
         fontSize: 30,
     },
     FooterContainerStyle: {
-        height: 80,
         backgroundColor: 'lightgray',
         justifyContent: 'center',
         alignItems: 'center',
@@ -47,7 +46,7 @@ const Styles = {
     HandImageStyle: {
         width: 250,
         height: 250,
-    }
-}
+    },
+};
 
 export default Styles;
