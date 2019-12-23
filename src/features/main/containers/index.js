@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import TopBar from '../components/TopBar';
 import Hands from '../components/Hands';
 import Footer from '../components/Footer';
@@ -7,11 +8,16 @@ import Styles from '../../../styles';
 
 const Main = () => {
     return (
-        <View style={Styles.MainWrapper}>
-            <TopBar />
-            <Hands />
-            <Footer />
-        </View>
+        <KeyboardAwareScrollView
+            contentContainerStyle={Styles.MainContainer}
+            scrollEnabled={false}
+        >
+            <View style={Styles.MainWrapper}>
+                <TopBar />
+                <Hands />
+                <Footer />
+            </View>
+        </KeyboardAwareScrollView>
     );
 };
 

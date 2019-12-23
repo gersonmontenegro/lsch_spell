@@ -1,16 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { View, Text } from 'react-native';
-import Assets from 'assets';
+import React, { useState } from 'react';
+import { View, TextInput } from 'react-native';
 import Styles from '../../../styles';
-import { getWord } from 'actions';
-import { selectCurrentWord } from 'reducers/selectors';
 
 const Footer = () => {
-    const currentWord = useSelector(selectCurrentWord);
+    const [userText, setUserText] = useState('');
+    const onChangeText = (text) => setUserText(text);
     return (
         <View style={Styles.FooterContainerStyle}>
-            <Text style={Styles.FooterMainTextStyle}>{currentWord}</Text>
+            <TextInput style={Styles.FooterMainTextStyle} value={userText} onChangeText={onChangeText} />
         </View>
     );
 };
