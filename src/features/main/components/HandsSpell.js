@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Image } from 'react-native';
 import useInterval from 'use-interval';
 import Assets from 'assets';
@@ -30,5 +30,12 @@ const HandsSpell = (props) => {
         <Image style={Styles.HandImageStyle} source={currentLetter} />
     );
 };
+
+
+const propTypes = {
+    letter: PropTypes.string.isRequired,
+};
+
+HandsSpell.propTypes = propTypes;
 
 export default HandsSpell;
